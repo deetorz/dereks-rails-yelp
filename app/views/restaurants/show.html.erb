@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card-trip">
+    <img src="http://source.unsplash.com/featured/?<%= @restaurant.category %>+food?&<%= rand(1000) %>" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @restaurant.name %></h2>
+        <p><%= @restaurant.category.capitalize %> </p>
+      </div>
+      <div>
+        <% backup_numbers = ['324.743.0098', '642.974.1153', '155.086.6996', '954.227.1813'] %>
+        <h2><%= @restaurant.phone_number.present? ? @restaurant.phone_number : backup_numbers.sample %></h2>
+        <p><%= @restaurant.address %></p>
+      </div>
+    </div>
+  </div>
+</div>

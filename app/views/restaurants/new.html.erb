@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1>Add a restaurant</h1>
+      <%= simple_form_for [@restaurant] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :category, collection: ['Chinese', 'Italian', 'Japanese', 'French', 'Belgian'], include_blank: false %>
+        <%= f.input :address %>
+        <%= f.input :phone_number, input_html: {placeholder: 'XXX.XXX.XXXX'} %>
+        <%= f.submit 'Add', class: 'btn-red mt-2' %>
+      <% end %>
+    </div>
+  </div>
+</div>

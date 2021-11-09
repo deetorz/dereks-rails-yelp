@@ -1,0 +1,22 @@
+.btn-ghost {
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  &:hover {
+    opacity: 1;
+    color: white;
+    background-color: rgb(235, 0, 0);
+    transition: background-color 0.3s ease;
+  }
+}
+
+.btn-red {
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  background-color: rgb(235, 0, 0);
+}
