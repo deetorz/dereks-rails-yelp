@@ -13,7 +13,7 @@ default: &default
 development:
   <<: *default
   # database: db/development.sqlite3
-  database: flatiron_mod3_development
+  database: rails-yelp-mvp_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,9 +21,9 @@ development:
 test:
   <<: *default
   # database: db/test.sqlite3
-  database: flatiron_mod3_test
+  database: rails-yelp-mvp_test
 
 production:
   <<: *default
   # database: db/production.sqlite3
-  database: flatiron_mod_production
+  database: rails-yelp-mvp_production
