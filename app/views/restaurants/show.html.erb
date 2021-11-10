@@ -22,7 +22,9 @@
     <h2>Reviews</h2>
     <% @restaurant.reviews.each do |review| %>
       <p class="review-text"><%= review.content %></p>
-      <p class="rating-text"><%= "#{review.rating}/5" %></p>
+      <% review.rating.times do %>
+        <i class="fas fa-star"></i>
+      <% end %>
       <%= link_to "Delete review",
                   review_path(review),
                   method: :delete,
