@@ -10,4 +10,13 @@ puts 'Creating restaurants...'
     phone_number: Faker::PhoneNumber.cell_phone
   )
 end
-puts "Created #{Restaurant.count} restaurants."
+
+100.times do
+  Review.create!(
+    content: Faker::Restaurant.review,
+    rating: (3..5).to_a.sample,
+    restaurant: Restaurant.all.sample
+  )
+end
+
+puts "Created #{Restaurant.count} restaurants and #{Review.count} reviews."
